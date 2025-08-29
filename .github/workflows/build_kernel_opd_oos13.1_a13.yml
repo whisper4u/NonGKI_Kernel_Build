@@ -1,4 +1,4 @@
-name: Build Kernel OnePlus 8 (OOS13.1) with KSU and SUSFS
+name: Build Kernel Oppopad (OOS13.1) with KSU and SUSFS
 on:
   workflow_call:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare Configuration
         run: |
-          CONFIG_ENV=$(grep -w "CONFIG_ENV" Profiles/instantnoodle_oos.env | head -n 1 | cut -d "=" -f 2)
+          CONFIG_ENV=$(grep -w "CONFIG_ENV" Profiles/opd.env | head -n 1 | cut -d "=" -f 2)
           CONFIG_LIST=(
               DEVICE_NAME
               DEVICE_CODENAME
